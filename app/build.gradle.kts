@@ -24,7 +24,13 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://dog.ceo/api/\"")
+            android.buildFeatures.buildConfig = true
+        }
         release {
+            buildConfigField("String", "BASE_URL", "\"https://dog.ceo/api/\"")
+            android.buildFeatures.buildConfig = true
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -89,7 +95,7 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
     //youtube iframe
-    implementation (libs.core)
+    implementation(libs.core)
 }
 
 // Allow references to generated code
