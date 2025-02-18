@@ -1,5 +1,6 @@
 package com.app.dogapp.presentation.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -7,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
@@ -45,7 +47,9 @@ fun GenerateDogsScreen(navController: NavController, viewModel: DogViewModel = h
         Spacer(modifier = Modifier.height(16.dp))
         Button(
             onClick = { viewModel.fetchRandomDogImage() },
-            colors = ButtonDefaults.buttonColors(containerColor = colorResource(R.color.button_color))
+            colors = ButtonDefaults.buttonColors(containerColor = colorResource(R.color.button_color)),
+            shape = RoundedCornerShape(12.dp),
+            border = BorderStroke(2.dp, Color.Black)
         ) {
             Text("Generate!", color = Color.White)
         }
