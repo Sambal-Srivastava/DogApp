@@ -9,4 +9,8 @@ sealed class Screen {
 
     @Serializable
     object GenerateDogs : Screen()
+
+    @Serializable
+    object CachedImages : Screen()
+
 }

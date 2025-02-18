@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.app.dogapp.presentation.screens.CachedImagesScreen
 import com.app.dogapp.presentation.screens.GenerateDogsScreen
 import com.app.dogapp.presentation.screens.HomeScreen
 
@@ -15,6 +16,9 @@ fun AppNavigation(navController: NavHostController) {
         }
         composable<Screen.GenerateDogs> {
             GenerateDogsScreen(navController)
+        }
+        composable<Screen.CachedImages> {
+            CachedImagesScreen(navController)
         }
     }
 }

@@ -38,5 +38,12 @@ fun HomeScreen(navController: NavController) {
             Text("Generate Dogs", color = Color.White)
         }
         Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(
+            onClick = { navController.navigate(Screen.CachedImages) },
+            colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = button_color))
+        ) {
+            Text("My Recently Generated Dogs", color = Color.White)
+        }
     }
 }
